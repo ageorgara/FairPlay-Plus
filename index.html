@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FairPlay — Fair Dynamic Pricing &amp; Certified-Fair Recommendations for Hotels</title>
-  <meta name="description" content="FairPlay (AAAI'24) and FairPlay+ (IASEAI'26): Game-theoretic fair pricing and certified-fair hotel room recommendations combating overtourism.">
+  <meta name="description" content="FairPlay (GAIW'23, AAAI'24) and FairPlay+ (IASEAI'26): Game-theoretic fair pricing and certified-fair hotel room recommendations combating overtourism.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -183,6 +183,7 @@
     </div>
     <p class="affiliations"><sup>1</sup>University of Southampton &ensp;<sup>2</sup>Technical University of Crete&ensp;<sup>3</sup>Artificial Intelligence Research Institute (IIIA, CSIC)</p>
     <div class="hero-btns">
+      <a href="FairPlay_GAIW23.pdf" class="btn-o" download><svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Workshop Paper (GAIW'23)</a>
       <a href="FairPlay_AAAI24.pdf" class="btn-p" download><svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>FairPlay Paper (AAAI'24)</a>
       <a href="FairPlayPlus_IASEAI26.pdf" class="btn-a" download><svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>FairPlay⁺ Paper (IASEAI'26)</a>
       <a href="https://github.com/ageorgara/CertifiedFairPlay" class="btn-o" target="_blank"><svg class="bi" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Code</a>
@@ -199,8 +200,14 @@
 <section class="sec fi" id="overview">
   <div class="dv"></div>
   <h2 class="st">Overview</h2>
-  <p class="sl">Two complementary works addressing fair hotel pricing — from dynamic pricing policy to a full certified-fair recommendations platform.</p>
+  <p class="sl">Three complementary works addressing fair hotel pricing — from a workshop sketch to a full certified-fair recommendations platform.</p>
   <div class="tl">
+    <div class="tl-i">
+      <div class="tl-d t" style="background:#6366F1">0</div>
+      <span class="tl-b" style="background:#EEF2FF;color:#4338CA">GAIW @ AAMAS 2023</span>
+      <h3>A Fair Dynamic Pricing Policy for the Hotel Industry</h3>
+      <p>The original workshop paper that introduced the core idea: a game-theoretic approach to fair hotel room pricing using cooperative game theory and the <strong>Owen value</strong>. Outlines a policy sketch where room prices reflect each hotel's relative power based on supply and demand, ensuring profit margins proportional to quality. Proposes a novel graph-based representation and presents initial experimental findings.</p>
+    </div>
     <div class="tl-i">
       <div class="tl-d t">1</div>
       <span class="tl-b b1">AAAI 2024</span>
@@ -211,7 +218,7 @@
       <div class="tl-d a">2</div>
       <span class="tl-b b2">IASEAI 2026</span>
       <h3>FairPlay⁺: A Certified-Fair Hotel Rooms Recommendations Framework</h3>
-      <p>Extends FairPlay into a full recommendations platform with <strong>certified-fair prices</strong>. The framework is modular — it can incorporate any fairness notion as a pluggable fair-base pricing policy. It introduces an <strong>incentivisation mechanism</strong> (Theorem 1), proving that hotels are weakly better-off adopting the fair price. Hotels retain autonomy over their pricing while the platform adjusts exposition opportunities to promote fairness. Explainable by design.</p>
+      <p>Extends FairPlay into a full recommendations platform with <strong>certified-fair prices</strong>. The framework is modular — it can incorporate any fairness notion as a pluggable fair-base pricing policy. It introduces an <strong>incentivisation mechanism</strong> (Theorem 1) proving that hotels are weakly better-off adopting the fair price. Hotels retain autonomy over their pricing while the platform adjusts exposition opportunities to promote fairness. Explainable by design.</p>
     </div>
   </div>
 </section>
@@ -240,16 +247,22 @@
   <div class="dv"></div>
   <h2 class="st">Publications</h2>
   <p class="sl">Download the papers and access the code.</p>
-  <div class="pc">
+  <div class="pc" style="grid-template-columns:repeat(3,1fr);gap:1.2rem">
+    <div class="pcrd">
+      <div class="pch" style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-bottom:3px solid #6366F1"><div class="ven" style="color:#A5B4FC">GAIW @ AAMAS 2023 · Workshop</div><h3>A Fair Dynamic Pricing Policy for the Hotel Industry</h3><div class="au">Streviniotis, Georgara, Bistaffa, Chalkiadakis</div></div>
+      <div class="pcb"><p>The workshop paper introducing the core idea: a cooperative game-theoretic approach to fair hotel room pricing using the Owen value, with a novel graph-based representation.</p>
+        <div class="paper-btns"><a href="FairPlay_GAIW23.pdf" class="btn-p" style="background:#6366F1" download><svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>PDF</a></div>
+      </div>
+    </div>
     <div class="pcrd">
       <div class="pch t"><div class="ven">AAAI 2024 · 38th Conference on AI</div><h3>FairPlay: A Multi-Sided Fair Dynamic Pricing Policy for Hotels</h3><div class="au">Streviniotis*, Georgara*, Bistaffa, Chalkiadakis</div></div>
-      <div class="pcb"><p>A game-theoretic dynamic pricing policy using Owen values that promotes two-sided fairness — fair prices for customers and fair exposure for providers. Evaluated on real-world hotel data from Athens, Barcelona, and Rome.</p>
+      <div class="pcb"><p>Full paper with complete technical details, the Exposure-Owen Ratio for provider fairness, and systematic evaluation on real-world hotel data from Athens, Barcelona, and Rome.</p>
         <div class="paper-btns"><a href="FairPlay_AAAI24.pdf" class="btn-p" download><svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>PDF</a><a href="https://ojs.aaai.org/index.php/AAAI/article/view/30243" class="btn-o2" target="_blank">AAAI Proceedings</a></div>
       </div>
     </div>
     <div class="pcrd">
       <div class="pch am"><div class="ven">IASEAI 2026 · Safe &amp; Ethical AI</div><h3>FairPlay⁺: A Certified-Fair Hotel Rooms Recommendations Framework</h3><div class="au">Georgara*, Streviniotis, Bistaffa, Rodriguez-Aguilar, Ramchurn, Chalkiadakis*</div></div>
-      <div class="pcb"><p>A modular framework for certified-fair recommendations. Incorporates any fairness notion, incentivises hotels to adopt fair pricing (Theorem 1), and is explainable by design. Simulation experiments on 48 hotels over 30 days.</p>
+      <div class="pcb"><p>A modular framework for certified-fair recommendations. Incentivises hotels to adopt fair pricing (Theorem 1), and is explainable by design. 48-hotel simulation over 30 days.</p>
         <div class="paper-btns"><a href="FairPlayPlus_IASEAI26.pdf" class="btn-a" download><svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>PDF</a><a href="https://github.com/ageorgara/CertifiedFairPlay" class="btn-o2" target="_blank"><svg class="bi" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Code</a></div>
       </div>
     </div>
@@ -284,7 +297,7 @@
 <!-- FAIRPLAY+ -->
 <section class="sec fi" id="fairplayplus">
   <div class="dv"></div>
-  <h2 class="st">FairPlay⁺: A Certified-Fair Framework</h2>
+  <h2 class="st">FairPlay⁺: The Platform</h2>
   <p class="sl">A modular, certified-fair recommendations framework that incentivises fair pricing.</p>
   <div class="steps">
     <div class="step"><div class="sn">1</div><h3>Visitor Query</h3><p>Guest submits check-in date, duration, room features, and budget to the platform.</p><div class="sa">→</div></div>
@@ -345,7 +358,21 @@
 <section class="csec" id="citation">
   <div class="ci2 fi">
     <h2>Citation</h2>
-    <div class="bl c1">FairPlay — AAAI 2024</div>
+    <div class="bl" style="color:#A5B4FC">FairPlay — GAIW @ AAMAS 2023</div>
+    <div class="bb"><button class="cb" onclick="copyBib(this)">Copy</button><pre>@inproceedings{streviniotis2023fairplay,
+  title     = {A Fair Dynamic Pricing Policy for the
+               Hotel Industry},
+  author    = {Streviniotis, Errikos and Georgara, Athina
+               and Bistaffa, Filippo and
+               Chalkiadakis, Georgios},
+  booktitle = {5th Games, Agents, and Incentives Workshop
+               (GAIW 2023), held at the 21st International
+               Conference on Autonomous Agents and
+               Multiagent Systems (AAMAS)},
+  year      = {2023},
+  address   = {London, England}
+}</pre></div>
+    <div class="bl c1" style="margin-top:1rem">FairPlay — AAAI 2024</div>
     <div class="bb"><button class="cb" onclick="copyBib(this)">Copy</button><pre>@inproceedings{streviniotis2024fairplay,
   title     = {FairPlay: A Multi-Sided Fair Dynamic
                Pricing Policy for Hotels},
@@ -366,7 +393,7 @@
                Rodriguez-Aguilar, Juan A. and
                Ramchurn, Sarvapali D. and
                Chalkiadakis, Georgios},
-  booktitle = {Proceedings of the 2nd Conference of the International
+  booktitle = {Second Conference of the International
                Association for Safe and Ethical
                Artificial Intelligence (IASEAI'26)},
   year      = {2026}
@@ -374,7 +401,7 @@
   </div>
 </section>
 
-<footer><p>FairPlay · <a href="https://github.com/ageorgara/CertifiedFairPlay" target="_blank">GitHub</a> · FairPlay⁺</p></footer>
+<footer><p>FairPlay &amp; FairPlay⁺ · <a href="https://github.com/ageorgara/CertifiedFairPlay" target="_blank">GitHub</a> · GAIW'23 &amp; AAAI'24 &amp; IASEAI'26</p></footer>
 
 <script>
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('v')})},{threshold:.08});
